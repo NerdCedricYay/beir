@@ -4,7 +4,7 @@
 **Assignment:** 1 – Information Retrieval System (Vector Space Model)  
 **Group Members:**  
 - Cedric Luiz Dimatulac: 
-- Joseph Sreih: 
+- Joseph Sreih: 300290385
 - Tanner Frisch: 300294742  
 
 **Division of Tasks:**  
@@ -39,7 +39,7 @@ This project implements an Information Retrieval (IR) system for the SciFact dat
 
 **Requirements:** Python 3.x, SciFact dataset in `datasets/scifact/`  
 
-### Build Inverted Index (Step 2)
+### 
 
 ```bash
 python indexer.py
@@ -98,6 +98,20 @@ Posting list for token 'brain':
 2. Generate ranked list for each test query
 3. Output results in ```Results``` file
 
+**Data structures**
+Input: String of text known as the query
+Output: A List of tuples containing (doc_id, cosine_score)
+
 **Results**  
 - First 10 answers for first 2 queries
-- MAP score using ```trec_eval```
+<img src="top_10_for_queries_0_1.png" width="600">
+- These queries are interesting because they show us the reality of documents and queries. 
+- Most queries are small Compared to the documents that they query. 
+- Large documents create large documents norms, which in turn make the cosine similiarty score appear very small. 
+- Even so, a small Cosine Similarity does not always mean that the document is not relevant, like the 2 cases above. 
+
+**Query only using titles**
+<img src="query_on_doc_title_only.png" width="600">
+
+**MAP score using ```trec_eval```**
+<img src="MAP.png" width="600">

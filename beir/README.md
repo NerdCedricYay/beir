@@ -112,12 +112,14 @@ Appears in 4 documents
 Input: String of text known as the query
 Output: A List of tuples containing (doc_id, cosine_score)
 
-**Results**  
+## Results
 - First 10 answers for first 2 queries
 <img src="top_10_for_queries_0_1.png" width="600">
-These queries are interesting because they show us the reality of documents and queries. Most queries are small Compared to the documents that they query. Large documents create large documents norms, which in turn make the cosine similiarty score appear very small. Even so, a small Cosine Similarity does not always mean that the document is not relevant, like the 2 cases above.
+- These queries are interesting because they show us the reality of documents and queries. Most queries are small Compared to the documents that they query. Large documents create large documents norms, which in turn make the cosine similiarty score appear very small. Even so, a small Cosine Similarity does not always mean that the document is not relevant, like the 2 cases above.
 
- **Query Using Titles Only**
+---
+
+## Query Using Titles Only
 
 The retrieval system is evaluated using only document titles.
 

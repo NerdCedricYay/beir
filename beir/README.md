@@ -109,8 +109,8 @@ Appears in 4 documents
 3. Output results in ```Results``` file
 
 **Data structures**
-Input: String of text known as the query
-Output: A List of tuples containing (doc_id, cosine_score)
+- Input: String of text known as the query
+- Output: A List of tuples containing (doc_id, cosine_score)
 
 ## Results
 - First 10 answers for first 2 queries

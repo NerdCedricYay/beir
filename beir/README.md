@@ -85,11 +85,21 @@ inverted_index = {
 }
 ```
 
+**Optimizations:**
+- Each document ID is stored only once per token using a Counter, which prevents duplicates.
+- inverted index (dict of dicts) allows fast lookup and updates of term frequencies.
+- document_freq tracks how many documents contain each token.
+
 **Results:**
 
 ```python
-Posting list for token 'brain':
-{'4983': 1, '169264': 2, '279052': 1, '654735': 2, '695938': 1, '803312': 5, '1220287': 2, '1292369': 1, '1389264': 3, '1410197': 3, '1583041': 1, '1616661': 1, '1733337': 4, '1771079': 2, '1836154': 1, '1871499': 3, '1889358': 4, '1964163': 2, '2194320': 1, '2225918': 1, '2356950': 1, '2424794': 1, '2436602': 2, '2437807': 2, ...}
+Vocabulary size: 29953
+Sample 100 tokens:
+['microstructural', 'development', 'human', 'newborn', 'cerebral', 'white', 'matter', 'assessed', 'vivo', 'diffusion', 'tensor', 'magnetic', 'resonance', 'imaging', 'alterations', 'architecture', 'developing', 'brain', 'affect', 'cortical', 'result', 'functional', 'disabilities', 'line', 'scan', 'weighted', 'mri', 'sequence', 'analysis', 'applied', 'measure', 'apparent', 'coefficient', 'calculate', 'relative', 'anisotropy', 'delineate', 'dimensional', 'fiber', 'preterm', 'full', 'term', 'infants', 'assess', 'effects', 'prematurity', 'early', 'gestation', 'studied', 'central', 'mean', 'wk', 'microm', 'decreased', 'posterior', 'limb', 'internal', 'capsule', 'coefficients', 'versus', 'closer', 'birth', 'absolute', 'values', 'areas', 'compared', 'nonmyelinated', 'fibers', 'corpus', 'callosum', 'visible', 'marked', 'differences', 'organization', 'data', 'indicate', 'quantitative', 'assessment', 'water', 'insight', 'living', 'induction', 'myelodysplasia', 'myeloid', 'derived', 'suppressor', 'cells', 'myelodysplastic', 'syndromes', 'mds', 'age', 'dependent', 'stem', 'cell', 'malignancies', 'share', 'biological', 'features', 'activated', 'adaptive']
+
+Posting list for token 'claim':
+{'5921065': 1, '17991818': 1, '27768226': 2, '41298619': 1}
+Appears in 4 documents
 ```
 
 ### Step 3 - Retrieval and Ranking

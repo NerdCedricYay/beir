@@ -42,7 +42,7 @@ This project implements an Information Retrieval (IR) system for the SciFact dat
 ### 
 
 ```bash
-python indexer.py
+python main.py
 ```
 
 ---
@@ -119,9 +119,16 @@ Output: A List of tuples containing (doc_id, cosine_score)
 - Most queries are small Compared to the documents that they query. 
 - Large documents create large documents norms, which in turn make the cosine similiarty score appear very small. 
 - Even so, a small Cosine Similarity does not always mean that the document is not relevant, like the 2 cases above. 
+## Query Using Titles Only
 
-**Query only using titles**
-<img src="query_on_doc_title_only.png" width="600">
+The retrieval system is evaluated using only document titles.
 
-**MAP score using ```trec_eval```**
-<img src="MAP.png" width="600">
+![Query on Document Titles](query_on_doc_title_only.png)
+
+---
+
+## MAP Score (trec_eval)
+
+The Mean Average Precision (MAP) computed using `trec_eval`:
+
+![MAP Score Output](MAP.png)

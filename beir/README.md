@@ -3,7 +3,7 @@
 **Course:** CSI4107 – Internet Retrieval  
 **Assignment:** 1 – Information Retrieval System (Vector Space Model)  
 **Group Members:**  
-- Cedric Luiz Dimatulac: 
+- Cedric Luiz Dimatulac: 300171173
 - Joseph Sreih: 300290385
 - Tanner Frisch: 300294742  
 

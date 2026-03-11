@@ -3,8 +3,8 @@ from preprocessing import preprocess
 from indexer import inverted_index
 from retrieve import retrieval
 
-CORPUS_PATH = "datasets/scifact/corpus.jsonl"
-QUERIES_PATH = "datasets/scifact/queries.jsonl"
+CORPUS_PATH = "dataset/scifact/corpus.jsonl"
+QUERIES_PATH = "dataset/scifact/queries.jsonl"
 
 def test_preprocessing(num_docs=2):
     with open(CORPUS_PATH, "r", encoding="utf-8") as f:

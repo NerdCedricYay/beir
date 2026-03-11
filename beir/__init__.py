@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from .logging import LoggingHandler
+from .logger import LoggingHandler
 
 __all__ = [
     "LoggingHandler",

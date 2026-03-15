@@ -85,7 +85,7 @@ P@10: 0.0807
 Although not as big of an improvement as the all-MiniLM-L6-v2, Doc2Vec still gave a small improvement to the reranking. However, these scores varied depending on parameters inputted into the Doc2Vec model and the scores here represent the highest score I could get by playing around with the parameters (vector size, epochs, etc...).
 
 ### Query 1 and 3 Top 10 Results
-
+<img src="Doc2Vec_query_1_and_3.png" width="600">
 
 
 ### Model 3 — 

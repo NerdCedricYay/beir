@@ -8,7 +8,7 @@
 - Tanner Frisch: 300294742  
 
 **Division of Tasks:**  
-- Cedric:
+- Cedric: Write report on findings
 - Tanner: Neural reranking with all-MiniLM-L6-v2 model
 - Joseph: Reranking using Doc2vec
 
@@ -66,8 +66,8 @@ This project implements a two stage IR system
 - Optimizaztions: Precomputing document embeddings, vector similarity computations using matrix operations.
 
 ### How to run Doc2Vec
-- Make sure to have numpy and gensim installed:
-```pip install numpy gensim```
+- Make sure to have the following pip libraries installed:
+```pip install numpy gensim tqdm```
 - Run ```python3 run_neural2```
 
 ### Model 3

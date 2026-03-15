@@ -84,6 +84,9 @@ MAP: 0.5561
 P@10: 0.0807
 Although not as big of an improvement as the all-MiniLM-L6-v2, Doc2Vec still gave a small improvement to the reranking. However, these scores varied depending on parameters inputted into the Doc2Vec model and the scores here represent the highest score I could get by playing around with the parameters (vector size, epochs, etc...).
 
+### Query 1 and 3 Top 10 Results
+
+
 
 ### Model 3 — 
 MAP:
@@ -96,4 +99,4 @@ P@10:
 - Neural reranking also helped a lot in capturing semantic relationships between queries and documents.
 - Alpha can be tuned to change the balance between neural and classical.
 - Quality of performance varied depending on parameters set for neural models. Example: Vector size of 256 gave lower scores than a vector size of 1024 .
-- Although having neural models can imporve accuracy, implementing a weaker model such as Doc2Vec for only an increase of roughly 0.02% MAP score can be seen as unecessary. 
+- Although having neural models can imporve accuracy, implementing a weaker model such as Doc2Vec for only an increase of roughly 0.03%-0.04% MAP score can be seen as unecessary. 

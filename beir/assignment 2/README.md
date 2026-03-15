@@ -64,6 +64,12 @@ This project implements a two stage IR system
 - Algorithm: Initial retrieval using cosine similiarity, then a reranking of the results using Doc2Vec which first generates embeddings for the docs and then uses them to calculate the final rankings by combining classical retrieval scores with neural similarity scores.
 - Data structures: Numpy arrays for embedding and final score, lists and dictionarries. 
 - Optimizaztions: Precomputing document embeddings, vector similarity computations using matrix operations.
+
+### How to run Doc2Vec
+- Make sure to have numpy and gensim installed:
+```pip install numpy gensim```
+- Run ```python3 run_neural2```
+
 ### Model 3
 
 ## Results
@@ -74,11 +80,13 @@ P@10: 0.0920
 The `Results` file shows that the neural reranker caused a significant improvement in the retrieval performance over the IR system from Assignment 1. For example, the top-ranked document for query 0 in the neural output has a score of `0.1660`, compared to a score of `0.0775` in the cosine-run. Overall, MAP increased from 0.51 to 0.6285, showing that the neural model was better at identifying relevant documents and pushes them higher in the ranking. This demonstrates that combining the classical IR system from Assignment 1 with neural embeddings produces more accurate results than classical IR alone.
 
 ### Model 2 — 
-MAP: 
-P@10:
+MAP: 0.5561 
+P@10: 0.0807
+Although not as big of an improvement as the all-MiniLM-L6-v2, Doc2Vec still gave a small improvement to the reranking. However, these scores varied depending on parameters inputted into the Doc2Vec model and the scores here represent the highest score I could get by playing around with the parameters (vector size, epochs, etc...).
+
 
 ### Model 3 — 
-MAP: 
+MAP:
 P@10: 
 
 ---
@@ -87,5 +95,5 @@ P@10:
 - Neural reranking performed better with full text, not preprocessed text. 
 - Neural reranking also helped a lot in capturing semantic relationships between queries and documents.
 - Alpha can be tuned to change the balance between neural and classical.
-- Quality of performance varied depending on parameters set for neural models. Example: Vector size of 256 vs 1024 gave a higher map score for Doc2Vec.
-- Although having neural models is good, implementing a weaker model such as Doc2Vec for only an increase of roughly 0.02% MAP score can be seen as unecessary. 
+- Quality of performance varied depending on parameters set for neural models. Example: Vector size of 256 gave lower scores than a vector size of 1024 .
+- Although having neural models can imporve accuracy, implementing a weaker model such as Doc2Vec for only an increase of roughly 0.02% MAP score can be seen as unecessary. 
